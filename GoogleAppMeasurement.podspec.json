@@ -1,6 +1,6 @@
 {
     "authors": "Google, Inc.",
-    "cocoapods_version": ">= 1.10.0",
+    "cocoapods_version": ">= 1.10.2",
     "default_subspecs": "AdIdSupport",
     "dependencies": {
         "GoogleUtilities/AppDelegateSwizzler": "~> 7.4",
@@ -33,14 +33,17 @@
     "subspecs": [
         {
             "name": "AdIdSupport",
+            "dependencies": {
+                "GoogleAppMeasurement/WithoutAdIdSupport": "8.7.0"
+            },
             "vendored_frameworks": [
-                "Frameworks/GoogleAppMeasurement.xcframework"
+                "Frameworks/GoogleAppMeasurementIdentitySupport.xcframework"
             ]
         },
         {
             "name": "WithoutAdIdSupport",
             "vendored_frameworks": [
-                "Frameworks/GoogleAppMeasurementWithoutAdIdSupport.xcframework"
+                "Frameworks/GoogleAppMeasurement.xcframework"
             ]
         }
     ],
